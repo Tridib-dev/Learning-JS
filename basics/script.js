@@ -179,8 +179,36 @@
 //     i++;
 // }
 
-let i = 0
-do{
-    console.log(i);
-    i++;
-}while(i <= 100);
+// let i = 1
+// do{
+//     console.log(i);
+//     i++;
+// }while(i <= 100);
+
+
+// //  ====================================================================
+// // function expression 
+// let fnc = function(){
+//     console.log("hello! hallelulai");
+// }
+
+// fnc();
+
+// //  ====================================================================
+
+
+// // fat arrow function
+// let courage = () => {
+//     console.log("Nasamj Doggy");
+// }
+
+
+//  =======================================================================
+
+// rest parameters
+
+let a = function (...val){
+    console.log(val);
+}
+
+a(1,2,33,5,6,67,679)
