@@ -1,6 +1,6 @@
-import readline from "readline/promises";
-import { stdin as input, stdout as output } from "process";
-import { randomInt } from "node:crypto";
+// import readline from "readline/promises";
+// import { stdin as input, stdout as output } from "process";
+// import { randomInt } from "node:crypto";
 
 
 // var b = 12
@@ -130,36 +130,57 @@ import { randomInt } from "node:crypto";
 // import { stdin as input, stdout as output } from "process";
 // import { randomInt } from "crypto";
 
-function rps(user, comp) {
-    if (user === comp) return "Draw";
-    if (user === "Rock" && comp === "Paper") return "comp";
-    if (user === "Scissor" && comp === "Rock") return "comp";
-    if (user === "Paper" && comp === "Scissor") return "comp";
-    return "user";
-}
+// function rps(user, comp) {
+//     if (user === comp) return "Draw";
+//     if (user === "Rock" && comp === "Paper") return "comp";
+//     if (user === "Scissor" && comp === "Rock") return "comp";
+//     if (user === "Paper" && comp === "Scissor") return "comp";
+//     return "user";
+// }
 
-const order = {
-    1: "Rock",
-    2: "Paper",
-    3: "Scissor",
-};
+// const order = {
+//     1: "Rock",
+//     2: "Paper",
+//     3: "Scissor",
+// };
 
-function random_comp() {
-    const a = randomInt(1, 4); // randomInt returns a number, no need for Number()
-    return order[a]; // Use brackets [] to access by variable key
-}
+// function random_comp() {
+//     const a = randomInt(1, 4); // randomInt returns a number, no need for Number()
+//     return order[a]; // Use brackets [] to access by variable key
+// }
 
-// Wrap top-level await in an async function if not using .mjs or "type": "module"
-// But since you are fixing the module error, top-level await is fine.
-const rl = readline.createInterface({ input, output });
+// // Wrap top-level await in an async function if not using .mjs or "type": "module"
+// // But since you are fixing the module error, top-level await is fine.
+// const rl = readline.createInterface({ input, output });
 
-try {
-    const user = await rl.question("What will you choose ('Rock'/'Paper'/'Scissor')? ");
-    const comp = random_comp();
+// try {
+//     const user = await rl.question("What will you choose ('Rock'/'Paper'/'Scissor')? ");
+//     const comp = random_comp();
     
-    console.log(`You chose: ${user}`);
-    console.log(`Computer chose: ${comp}`);
-    console.log("Winner =>", rps(order[user], comp));
-} finally {
-    rl.close();
-}   
+//     console.log(`You chose: ${user}`);
+//     console.log(`Computer chose: ${comp}`);
+//     console.log("Winner =>", rps(order[user], comp));
+// } finally {
+//     rl.close();
+// }   
+
+
+
+//  ==============================================================================
+
+
+// for (let i = 1 ; i <= 10 ; i++){
+//     console.log(i)
+// }
+
+// let i = 1
+// while(i < 100){
+//     console.log(i);
+//     i++;
+// }
+
+let i = 0
+do{
+    console.log(i);
+    i++;
+}while(i <= 100);
