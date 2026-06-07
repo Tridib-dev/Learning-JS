@@ -1,6 +1,8 @@
 // import readline from "readline/promises";
 // import { stdin as input, stdout as output } from "process";
 // import { randomInt } from "node:crypto";
+// import { devNull } from "node:os";
+// import { count } from "node:console";
 
 
 // var b = 12
@@ -222,4 +224,101 @@
 // })();
 
 //  ============================================================================
+
+
+// //  BMI calculator:
+
+
+
+// let calc = function (w,h){
+//     return w/(h**2)
+// }
+
+// let evaluation = (w,h) => {
+//     if (calc(w,h) < 18.5){
+//         console.log("Underweight");
+//     }
+//     else if (18.5 <= calc(w,h) < 25){
+//         console.log("Normal");
+//     }
+//     else if (25 <= calc(w,h) < 30){
+//         console.log("Overweight");
+//     }
+//     else{
+//         console.log("Obese");
+//     }
+// }
+
+// let rl = readline.createInterface({input,output});
+
+// try{
+//     let weight = Number(await rl.question("Enter your weight in kg: "));
+//     let height = Number(await rl.question("Enter your height in m: "));
+//     evaluation(weight,height);
+// }
+// finally{
+//     rl.close();
+// }
+
+
+//  =====================================================
+
+// //  creating a counter using closure 
+
+// function counter(){
+//     let a = 0;
+//     return function () {
+//         a++;
+//         return a;
+//     }
+// }
+
+
+// let count = counter()
+// console.log(count())
+// console.log(count())
+// console.log(count())
+// console.log(count())
+
+
+//  ========================================================================
+
+// let arr = [11,14,67,34,34];
+
+// arr.forEach(function(val){
+//     console.log(val+5);
+// })
+// console.log("----------------------")
+// arr.forEach(function(val){
+//     val+=3;
+// })
+// arr.forEach(function(val){
+//     console.log(val)
+// })
+
+
+// ========================================================================
+
+// // objects
+
+// let obj = {
+//     name : "Tridib",
+//     age : 17,
+//     email : "test@test.com",
+//     address : {
+//         state : "West Bengal",
+//         city : "Asansol",
+//     }
+// }
+
+// // let obj2 = {admin : true,...obj}
+
+// let obj2 = JSON.stringify(obj)
+// obj2 = JSON.parse(obj2)
+// obj2.address.city = "Kolkata"
+// console.log(obj2)
+// console.log(obj)
+
+
+// ==========================================================================
 
