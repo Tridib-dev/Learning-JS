@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -29,7 +29,7 @@
             align-items:center;
         }
 
-        .card{
+        /* .card{
             width:450px;
             background:#1f1f1f;
             border-radius:20px;
@@ -39,10 +39,10 @@
             flex-direction:column;
             align-items:center;
             gap:20px;
-        }
+        } */
 
         input{
-            display:none;
+            display:block;
         }
 
         #btn{
@@ -85,6 +85,36 @@
             text-align:left;
             line-height:1.8;
         }
+        .card{
+            max-width: 200px;
+            padding: 20px;
+            border : 1px solid #555;
+            color: white;
+            display: inline-block;
+            border-radius: 15px;
+            margin-top: 40px;
+        }
+        .profile{
+            width: 40px;
+            height: 40px;
+            background-color: red;
+            border-radius: 50%;
+            mask-border: 10px;
+            overflow: hidden;
+        }
+        .card p{
+            font-size: 12px;
+            margin-top: 20px;
+        }
+        .card h5{
+            margin-top: 5px;
+        }
+        .card img{
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            mask-border: 10px;
+        }
     </style>
 </head>
 <body>
@@ -96,7 +126,7 @@
         <option value="Apple IPhone">Iphone</option>
         <option value="Oppo">Oppo</option>
     </select> -->
-    <div id="main">
+    <!-- <div id="main">
         <div class="card">
             <input type="file" id="inp">
         
@@ -104,7 +134,64 @@
         
             <div id="fileInfo"></div>
         </div>
+    </div> -->
+    <!-- <div id="main">
+        <form action="">
+            <input type="text" placeholder="Name">
+            <input type="text" placeholder="Description" maxlength="150" title="50 words">
+            <input type="text" placeholder="Occupation">
+            <input type="text" placeholder="profile picture">
+            <input type="submit">
+        </form>
     </div>
+
+    
     <script src = "script.js"></script>
+</body>
+</html> --> 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #follower{
+            position: absolute;
+            width:40px;
+            height:40px;
+            border-radius:50%;
+            transition: cubic-bezier(0.19, 1, 0.22, 1) 0.005s;
+            position:fixed;
+            left:0;
+            top:0;
+
+            background:crimson;
+
+            transform:translate(-50%, -50%);
+        }
+        body{
+            overflow: hidden;
+            position: relative;
+        }
+        .lt{
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div id="follower"></div> -->
+    <ul>
+        <li>apple</li>
+        <li>guava</li>
+        <li>banana</li>
+        <li>condom</li>
+        <li>milkshake</li>
+        <li>cereal</li>
+    </ul>
+
+     <script src = "script.js"></script>
 </body>
 </html>
