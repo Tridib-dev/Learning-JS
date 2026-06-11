@@ -140,9 +140,66 @@
 
 // ============================================================================================
 
-const item = document.querySelector("ul")
-console.log(item)
+// const item = document.querySelector("ul")
+// console.log(item)
 
-item.addEventListener("click",(params)=>{
-    params.target.classList.toggle("lt")
-});
+// item.addEventListener("click",(params)=>{
+//     params.target.classList.toggle("lt")
+// });
+
+
+
+// ============================================================================================
+    
+const func =(params) => {
+    span = counter.querySelector("span");
+    span.classList.add("span");
+    span.textContent = input.value.length;
+
+    remaining_span = remaining.querySelector("span");
+    remaining_span.classList.add("span");
+    remaining_len = maxLength - input.value.length;
+
+    if (remaining_len <= 10){
+        remaining_span.style.color="red";
+    }
+    else{
+        remaining_span.style.color="white";
+    }
+    
+    remaining_span.textContent = remaining_len;
+};
+
+
+const maxLength = 100;
+
+const main = document.querySelector("#main");
+const card = document.createElement("div");
+card.classList.add("card");
+main.appendChild(card);
+
+search_container = document.createElement("div");
+search_container.classList.add("search-container");
+card.appendChild(search_container);
+
+search_icon = document.createElement("div");
+search_icon.classList.add("search-icon");
+search_icon.innerHTML = "🔍"
+search_container.appendChild(search_icon);
+
+input = document.createElement("input");
+input.setAttribute("type","text");
+input.setAttribute("placeholder","Search anything...");
+input.maxLength = maxLength;
+search_container.appendChild(input);
+
+const counter = document.createElement("p");
+counter.innerHTML = "Typed Characters : <span>0</span> charachters";
+search_container.appendChild(counter);
+counter.style.color = "white"
+input.addEventListener("input",func);
+
+const remaining = document.createElement("p");
+remaining.innerHTML = `Remaining Characters : <span>${maxLength}</span> charachters`;
+search_container.appendChild(remaining);
+remaining.style.color = "white"
