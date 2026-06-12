@@ -2,9 +2,9 @@
 //     console.log(this);
 // }  
 
-// alpha()// Returns window object in non-strict mode and undefined in strict mode.
+// alpha() // Returns window object in non-strict mode and undefined in strict mode.
 
-// console.log(this) // Returns window object in non-strict mode and undefined in strict mode.
+// console.log(this)  // Returns window object in non-strict mode and undefined in strict mode.
 
 
 
