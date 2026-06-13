@@ -21,20 +21,20 @@
 // });
 
 
-let pr = new Promise(function(res,rej){
-    setTimeout(() => {
-        rn  = Math.floor(Math.random()*10);
-        if (rn >= 5){
-            res("Accepetd with "+rn);
-        }
-        else{
-            rej("Rejected with "+rn)
-        }
-    }, 1000);
-})
+// let pr = new Promise(function(res,rej){
+//     setTimeout(() => {
+//         rn  = Math.floor(Math.random()*10);
+//         if (rn >= 5){
+//             res("Accepetd with "+rn);
+//         }
+//         else{
+//             rej("Rejected with "+rn)
+//         }
+//     }, 1000);
+// })
 
-pr.then(function(data){
-    console.log(data);
-}).catch(function(err){
-    console.log(err);
-})
+// pr.then(function(data){
+//     console.log(data);
+// }).catch(function(err){
+//     console.log(err);
+// })
