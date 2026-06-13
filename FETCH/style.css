@@ -1,0 +1,161 @@
+:root {
+    color-scheme: dark;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: radial-gradient(circle at top left, rgba(255,255,255,.12), transparent 26%),
+                            radial-gradient(circle at bottom right, rgba(96,165,250,.12), transparent 22%),
+                            #020617;
+    color: #f8fafc;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+.app-shell {
+    width: min(1200px, 100%);
+}
+.toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+.toolbar h1 {
+    margin: 0;
+    font-size: 1.6rem;
+    letter-spacing: -0.03em;
+}
+.toolbar p {
+    margin: 0.45rem 0 0;
+    color: rgba(248,250,252,.72);
+    font-size: 0.95rem;
+}
+.refresh-btn {
+    border: 1px solid rgba(255,255,255,.18);
+    background: rgba(255,255,255,.08);
+    color: #f8fafc;
+    padding: 0.9rem 1.4rem;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 18px 45px rgba(0,0,0,.12);
+}
+.refresh-btn:hover {
+    transform: translateY(-1px) scale(1.01);
+    background: rgba(255,255,255,.12);
+    border-color: rgba(255,255,255,.28);
+}
+.user-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.2rem;
+}
+.user-card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,.14);
+    background: rgba(255,255,255,.08);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-radius: 28px;
+    padding: 1.5rem;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    box-shadow: 0 24px 60px rgba(0,0,0,.18);
+}
+.user-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 30px 75px rgba(0,0,0,.24);
+    border-color: rgba(255,255,255,.24);
+}
+.avatar {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255,255,255,.24);
+    margin-bottom: 1rem;
+}
+.user-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.8rem;
+}
+.user-name {
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+.user-email {
+    margin: 0.35rem 0 0;
+    color: rgba(248,250,252,.7);
+    font-size: 0.9rem;
+    word-break: break-all;
+}
+.user-bio {
+    margin-top: 1.2rem;
+    color: rgba(248,250,252,.75);
+    line-height: 1.75;
+    font-size: 0.97rem;
+}
+.user-chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.35rem 0.85rem;
+    border-radius: 999px;
+    background: rgba(255,255,255,.1);
+    color: #dbeafe;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+}
+/* 1. The Shimmer Animation moving left to right */
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+/* 2. The Global Skeleton Base Layer */
+.skeleton {
+    background: linear-gradient(90deg, #e2e8f0 25%, #f1f5f9 50%, #e2e8f0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.6s infinite linear;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+/* 3. Skeleton Element Specific Dimensions */
+/* 3. Skeleton Element Specific Dimensions */
+.avatar.skeleton {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,.24);
+    margin-bottom: 1rem;
+}
+
+.skeleton-name {
+    width: 140px;
+    height: 1.15rem; /* Matches your real text height */
+    margin-bottom: 0.35rem;
+}
+
+.skeleton-email {
+    width: 190px;
+    height: 0.9rem; /* Matches your real text height */
+}
+
+.skeleton-chip {
+    width: 65px;
+    height: 24px;   /* Mimics the padding height of your chip */
+    border-radius: 999px;
+    align-self: flex-start; /* Keeps it aligned properly inside the flex container */
+}
+
+.skeleton-bio {
+    margin-top: 1.2rem;
+    width: 85%;
+    height: 1rem;   /* Matches your real text height */
+}
